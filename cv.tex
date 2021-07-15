@@ -1,0 +1,162 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{cv,booktabs,fontawesome}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+% Change color to black
+\def\headcolor{\color[rgb]{0,0,0}}
+
+\newdimen\datemarginlength
+\datemarginlength=5em
+\newcommand{\itemspacing}{\rule{0pt}{.5cm}}
+
+% Do not use bibtex for publication it's overkill. Add a bullet point with
+% \publication{authors}{title}{conf}{year}{url}
+\newcommand{\publication}[5]{\textbf{#2}. #1. In {#3} #4. \ifx#5\empty\else\href{#5}{\faExternalLink}\fi}
+\newcommand{\iclr}{\emph{International Conference on Learning Representations}, ICLR}
+\newcommand{\ijcai}{\emph{International Joint Conference on Artificial Intelligence}, IJCAI}
+\newcommand{\neurips}{\emph{Neural Information Processing Systems}, NeurIPS}
+\newcommand{\cvpr}{\emph{Conference on Computer Vision and Pattern Recognition}, CVPR}
+
+% Space before section headings
+\titlespacing{\section}{0pt}{2ex}{1ex}
+
+\name{Name}
+
+\info{
+      \\
+      \faicon{envelope}   & \href{mailto:test@email.com}{test@email.com}\\
+      \faicon{desktop}     & \href{www.personalpage.com}{www.personalpage.com}\\
+      \faicon{github}     & \href{https://github.com/test}{github username}\\
+      \faicon{map-marker} & City, Country}
+
+\usepackage[sfdefault,lf,t]{carlito}
+% \renewcommand{\bibfont}{\normalfont\fontsize{10}{12.4}\sffamily}
+\usepackage{inconsolata}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+
+
+\section{Education}
+
+\begin{tabular}{>{\raggedleft}p{\datemarginlength}!{\color{gray}\vrule}l}
+2018--& \textbf{Institution 3}
+\\& Ph.D. in Computer Science and Engineering supervised by Prof. X.
+\\
+\itemspacing{}%
+2015--2018 & \textbf{Institution 2}
+\\& M.Sc. in Computer Science and Engineering. \emph{GPA: 3.80/4.0}.\\
+\itemspacing{}%
+2012--2015 & \textbf{Institution 1}
+\\&B.Sc. in Computer Science and Engineering. \emph{GPA: 3.80/4.0}.
+\end{tabular}
+
+
+
+
+\section{Experience}
+
+\begin{tabular}{>{\raggedleft}p{\datemarginlength}!{\color{gray}\vrule}p{\dimexpr\linewidth-\datemarginlength-.7cm}}
+2021 & \textbf{Company 1} · Job title (\emph{6 months}) · Location\\&
+  Job description.\\
+\itemspacing{}%
+2020 & \textbf{Company 2} · Job title (\emph{6 months}) · Location\\&
+  Job description.\\
+\end{tabular}
+
+
+
+\section{Publications}
+
+\begin{itemize}
+  \item
+  {\publication
+  {Corresponding Author*, Author 2, Author 3}
+  {Paper Title}
+  {\cvpr{}} % define full name at the beginning
+  {2021}
+  {}
+  }
+  \item
+  {\publication
+  {Corresponding Author*, Author 2, Author 3}
+  {Paper Title}
+  {\emph{Conference/Journal Name},} 
+  {2021}
+  {paper link}
+  }
+\end{itemize}
+
+
+
+
+\section{Awards}
+
+\begin{tabular}{>{\raggedleft}p{\datemarginlength}!{\color{gray}\vrule}l}
+2021&\textbf{Award 2.} Award description.\\
+2020&\textbf{Award 1.} Award description.\\
+\end{tabular}
+
+
+
+
+\section{Teaching Assistant}
+\begin{tabular}{>{\raggedleft}p{\datemarginlength}!{\color{white}\vrule}l}
+Bachelor &Course 1, Course 2.\\
+\itemspacing{}%
+Graduate&Course 3, Course 4.
+\end{tabular}
+
+
+
+
+\section{Skills}
+\begin{tabular}{>{\raggedleft}p{\datemarginlength}!{\color{white}\vrule}l}
+Languages&Python.\\
+Frameworks&PyTorch.\\
+DevOps&Docker.\\
+Misc.&Unix.
+\end{tabular}
+
+
+
+
+
+
+
+\section{Other Projects}
+
+\begin{tabular}{>{\raggedleft}p{\datemarginlength}!{\color{gray}\vrule}p{\dimexpr\linewidth-\datemarginlength-.7cm}}
+2021&\textbf{Project Name} with Prof. X (Institution)\\&
+  Project description.\\
+\itemspacing{}%
+2020&\textbf{Project Name} with Prof. Y (Institution) \hfill \href{projectlink.com}{\underline{project link here}}\\&
+  Project description.
+\end{tabular}
+
+
+\section{Languages}
+
+\begin{tabular}{>{\raggedleft}p{\datemarginlength}!{\color{white}\vrule}l}
+&French (mother-tongue) · English (C1)
+\end{tabular}
+
+
+\section{Interests and Volunteering}
+\begin{tabular}{>{\raggedleft}p{\datemarginlength}!{\color{gray}\vrule}p{\dimexpr\linewidth-\datemarginlength-.7cm}}
+2020--2021 & \textbf{Activity 2} · Title \\&
+  Activity description.\\
+\itemspacing{}%
+Fall 2020 & \textbf{Activity 1} · Title\\&
+  Activity description.\\
+\end{tabular}
+
+
+\end{document}
